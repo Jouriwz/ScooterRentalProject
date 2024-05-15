@@ -1,0 +1,78 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(src/assets/images/battle/homebg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.battle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(src/assets/images/battle/battlebg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid #1D2837;
+    border-radius: 10px;
+    width: 95%;
+    height: 90%;
+}
+
+.battle-container {
+    display: grid;
+    grid-template-areas:
+        '. info info . . .'
+        '. . . epokemon epokemon .'
+        '. pokemon pokemon einfo einfo .'
+        '. menus menus menus menus .';
+    align-items: center;
+    justify-items: center;
+    grid-gap: 30px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.battle-container>div {
+    width: 100%;
+}
+
+/* Opponent info */
+.item1 {
+    grid-area: info;
+    max-width: 500px;
+}
+
+/* player pokemon */
+.item2 {
+    grid-area: pokemon;
+    display: flex;
+    justify-content: center;
+}
+
+/* Battle Menu */
+.item3 {
+    grid-area: menus;
+    display: flex;
+    justify-content: center;
+}
+
+/* Enemy info */
+.item4 {
+    grid-area: einfo;
+    max-width: 500px;
+}
+
+/* Enemy Pokemon */
+.item5 {
+    grid-area: epokemon;
+    display: flex;
+    justify-content: center;
+}
+

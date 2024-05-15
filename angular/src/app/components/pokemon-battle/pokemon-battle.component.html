@@ -1,0 +1,52 @@
+<div class="main-container">
+    <div class="battle-wrapper">
+        <div class="battle-container">
+
+            <!-- opponent-info -->
+            <div class="item1" *ngIf="battle != undefined">
+                <app-player-info [data]="battle.getOpponent()"></app-player-info>
+            </div>
+
+            <!-- player info -->
+            <div class="item4" *ngIf="battle != undefined">
+                <app-player-info [data]="battle.getUser()"></app-player-info>
+            </div>
+
+            <!-- opponent pokemon -->
+            <div class="item5" *ngIf="battle != undefined">
+                <app-enemy-pokemon [data]="battle.getOpponent()"></app-enemy-pokemon>
+            </div>
+
+            <!-- player pokemon -->
+            <div class="item2" *ngIf="battle != undefined">
+                <app-player-pokemon [data]="battle.getUser()"></app-player-pokemon>
+            </div>
+
+            <!-- battle Menu -->
+            <div class="item3">
+                <app-battle-menu *ngIf="checkUser()"></app-battle-menu>
+                <div style="display: flex; position: absolute; bottom: 10%;" *ngIf="!checkUser()">
+                    <span style="padding: 1rem">Waiting for your opponent</span>
+                    <img src="assets/images/battle/waiting.gif">
+                </div>
+            </div>
+
+            <div *ngIf="modal" style="
+            width: 19rem;
+    position: absolute;
+    background: gray;
+    height: 7rem;
+    border-radius: 5%;
+    top: 33%;
+    text-align: center;
+    padding: 10px;
+">
+                {{endMessage}}
+                <br>
+                <a routerLink="/battle-select" routerLinkActive="active">Back to battle select</a>
+            </div>
+
+        </div>
+    </div>
+    <app-navigation></app-navigation>
+</div>

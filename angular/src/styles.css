@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+a {
+    color: #fff
+}
+
+ul {
+    list-style: none;
+}
+
+
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+

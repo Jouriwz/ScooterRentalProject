@@ -1,0 +1,35 @@
+.player-info {
+    padding: 10px;
+    background-color: #31445A;
+    border: 2px solid #1D2837;
+    border-radius: 10px;
+}
+
+.player-info p {
+    text-align: end;
+}
+
+.healthbar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bar {
+    display: inline-flex;
+    align-items: center;
+    width: 80%;
+    padding: 5px;
+    background-color: #1D2837;
+    border-radius: 5px;
+}
+
+.bar h2 {
+    margin: 0rem .7rem;
+}
+
+.health {
+    background-color: #69B456;
+    width: 100%;
+    height: 30px;
+    border-radius: 50px;
+}

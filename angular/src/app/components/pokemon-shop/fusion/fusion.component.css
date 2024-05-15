@@ -1,0 +1,112 @@
+.img-container{
+    margin: 5px auto 5px auto;
+    border: 5px solid white;
+    border-radius: 20px;
+    width: 30%;
+    height: 20%;
+    background-color: #31445A;
+    padding: 10px;
+}
+
+.img-container img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.tier-bar{
+    margin: 4rem auto auto;
+    border: 5px solid white;
+    border-radius: 20px;
+    max-width: 95%;
+    width: 90%;
+    height: 7%;
+    background-color: #31445A;
+}
+
+.fusion-pokemon-select-box{
+    margin: 1rem auto auto;
+    border: 5px solid white;
+    padding: 10px 5px 10px 5px;
+    border-radius: 20px;
+    max-width: 90%;
+    width: 90%;
+    height: 58%;
+    background-color: #31445A;
+    display: flex;
+}
+
+.fusion-pokemon-select-box > div{
+    height: 80px;
+    flex: 0 0 25%;
+}
+
+.fusion-pokemon-select-box > div > img{
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.fusion-pokemon-select-box > div > p{
+    font-size: 15px;
+}
+
+.tiers{
+    top: -60px;
+    position: relative;
+}
+
+.tiers :nth-child(1){
+    left: 15%;
+}
+
+.tiers :nth-child(2){
+    left: 55%;
+}
+
+.tiers :nth-child(3){
+    left: 90%;
+}
+
+.tier{
+    position: absolute;
+}
+
+.pole{
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+    width: 5px;
+    height: 40px;
+    margin: auto;
+    background-color: white;
+}
+
+.green-bar{
+    border-radius: 13px;
+    max-width: 100%;
+    width: 40%;
+    height: 100%;
+    background-color: #00ffbb;
+}
+
+.action-buttons{
+    margin: 5px auto 5px auto;
+    border-radius: 20px;
+    max-width: 90%;
+    width: 90%;
+    height: 6%;
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
+
+.action-buttons > button {
+    border: 3px solid white;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+}
+
+.action-buttons :first-child {
+    background-color: #b72121;
+}

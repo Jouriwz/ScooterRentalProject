@@ -1,0 +1,67 @@
+<div class="main-container">
+    <div class="bs-container">
+        <div class="table-container">
+            <h3>Open Matchlist</h3>
+            <div class="table-content">
+                <table>
+                    <tr>
+                        <th>Battle id</th>
+                        <th>Username</th>
+                        <th>Party Size</th>
+                        <th>Turn Timer</th>
+                        <th>Open</th>
+                    </tr>
+                    <tr *ngFor="let match of matches">
+                        <td *ngIf="match[1].open">{{match[1].battle_id}}</td>
+                        <td *ngIf="match[1].open">{{match[1].user_1.username}}</td>
+                        <td *ngIf="match[1].open">{{match[1].max_pokemons}}</td>
+                        <td *ngIf="match[1].open">{{match[1].countdown}}</td>
+                        <td *ngIf="match[1].open">YES</td>
+                        <td *ngIf="match[1].open" style="cursor: pointer;" (click)="joinMatch(match[1])">JOIN</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="match-container">
+            <div class="match-card">
+                <h3>Create Battle</h3>
+                <div class="match-card-content">
+                    <div class="match-cred">
+                        <p>Party Size</p>
+                        <input placeholder="Max pokemons" [(ngModel)]="max_pokemons" name="max_pokemons" type="number" min="1" max="6">
+                        <p>Turn Timer</p>
+                        <input placeholder="Turn countdown" [(ngModel)]="countdown" name="countdown" type="number" min="30" max="60">
+                    </div>
+                    <button (click)="newBattle()">New Battle</button>
+                </div>
+            </div>
+
+            <div class="match-card">
+                <h3>Join Battle</h3>
+                <div class="match-card-content join-battle">
+                    <input name="battleId" type="text" [(ngModel)]="battleID" placeholder="Enter BattleID">
+                    <button (click)="joinMatchById()">Join Battle</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="party-container">
+            <h3>Current Party</h3>
+            <div class="party-content">
+                <div *ngFor="let item of player_pokemons">
+                    <span>ID: {{item.pokemon.id}}</span> -
+                    <span>{{item.pokemon.name}}</span> -
+                    <span>In Team: {{item.inTeam}}</span> -
+                    <span>Health: {{item.health}}</span>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <app-navigation></app-navigation>
+</div>
+
+

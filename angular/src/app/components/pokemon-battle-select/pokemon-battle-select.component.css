@@ -1,0 +1,233 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(src/assets/images/battleSelect/battleModebg2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.bs-container {
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(49, 68, 90, 0.9);
+    border: 2px solid #1D2837;
+    border-radius: 10px;
+    width: 95%;
+    height: 90%;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 90%;
+    color: #fff;
+}
+
+.table-content {
+    width: 90%;
+    height: 100%;
+    overflow-y: auto;
+    border: 3px solid #1D2837;
+    border-radius: 10px;
+    background-color: #627A96;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+table tr th,
+table tr td {
+    border-right: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    padding: 10px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    border-left: 1px solid #bbb;
+}
+table tr th {
+    border-top: 1px solid #bbb;
+}
+
+/* top-left border-radius */
+table tr:first-child th:first-child {
+    border-top-left-radius: 6px;
+}
+
+/* top-right border-radius */
+table tr:first-child th:last-child {
+    border-top-right-radius: 6px;
+}
+
+/* bottom-left border-radius */
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 6px;
+}
+
+/* bottom-right border-radius */
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 6px;
+}
+
+tr:nth-child(even) {
+    background-color: #1D2837;
+    border-color: #7E9DC1;
+}
+
+tr:nth-child(odd) {
+    background-color: #7E9DC1;
+    border-color: #1D2837;
+}
+
+.match-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 33%;
+    height: 90%;
+}
+
+
+.match-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.match-card h3 {
+    color: #fff;
+}
+
+.match-card-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 240px;
+    height: 100%;
+    max-width: 530px;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #1D2837;
+    background-color:#31445A;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.match-cred {
+    display: flex;
+    flex-direction: column;
+}
+
+.match-cred input {
+    padding: 10px;
+    background-color: #7E9DC1;
+    border: 2px solid #1D2837;
+    border-radius: 10px;
+    height: 50px;
+    width: 170px;
+}
+
+.match-card button {
+    background-color: #4DAD5B;
+    padding: 30px;
+    border: 2px solid #2f7f3b;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.join-battle {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.join-battle-input {
+    width: 80% !important;
+}
+
+.party-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 90%;
+}
+
+.party-container h3 {
+    color: #fff;
+}
+
+.party-content {
+    color: #fff;
+    border: 2px solid #1D2837;
+    border-radius: 10px;
+    background-color: #31445A;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    .bs-container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .table-container {
+        width: 90%;
+    }
+
+    .match-container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .party-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .bs-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .table-container {
+        width: 90%;
+    }
+
+    .match-container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .party-container {
+        width: 90%;
+    }
+
+}
+
+

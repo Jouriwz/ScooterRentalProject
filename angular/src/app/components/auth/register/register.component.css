@@ -1,0 +1,98 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: #fff
+}
+
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex; /* Makes element a flex element */
+    justify-content: center; /* Centers the child element on X axis */
+    align-items: center; /* Aligns the child element on Y axis  */
+    background-image: url(/../assets/images/login/loginbg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    max-height: 600px;
+    padding: 20px;
+    background-color: #31445A;
+    border: 2px solid #1D2837;
+    border-radius: 10px;
+}
+
+.image-container {
+
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.form-container {
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 5px 0px;
+}
+
+.form-group label {
+    display: inline-flex;
+    align-content: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 250px;
+    min-width: 200px;
+    color: #fff;
+}
+
+/* login form */
+input[type=text],
+input[type=email],
+input[type=password] {
+    width: 100%;
+    max-width: 250px;
+    min-width: 200px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.register-button {
+    background-color: #4DAD5B;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 1rem;
+}

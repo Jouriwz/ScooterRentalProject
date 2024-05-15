@@ -1,0 +1,124 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(src/assets/images/home/homebg.png);;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.tut-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(49, 68, 90, 0.9);
+    border: 2px solid #1D2837;
+    border-radius: 10px;
+    width: 95%;
+    height: 90%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.tut-container h1 {
+    color: #fff;
+}
+
+
+.item-container {
+    display: grid;
+    grid-template-areas:
+        'battle  party pokedex '
+        'battle shop shop';
+    grid-gap: 10%;
+    padding: 1% 5% 5% 5%;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.item-container>div {
+    text-align: center;
+}
+
+.item-container>div:hover {
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.item-info {
+    background-color: #31445A;
+    border: 2px solid #1D2837;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.item1 {
+    grid-area: battle;
+}
+
+.battle-img {
+    background-image: url(src/assets/images/home/battle.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    border: 2px solid #1D2837;
+    border-radius: 10px;
+}
+
+.item2 {
+    grid-area: party;
+}
+
+
+
+.item3 {
+    grid-area: pokedex;
+}
+
+
+
+.item4 {
+    grid-area: shop;
+}
+
+
+@media (max-width: 992px) {
+    .tut-container {
+        overflow-y: scroll;
+    }
+
+    .item-container {
+        grid-template-areas:
+            'battle  party'
+            'pokedex  shop'
+            'rules  logout';
+    }
+}
+
+@media (max-width: 576px) {
+    .tut-container {
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    .item-container {
+        grid-template-areas:
+            'battle'
+            'party'
+            'pokedex'
+            'shop'
+            'rules'
+            'logout';
+    }
+
+}

@@ -1,0 +1,76 @@
+<div class="main-container">
+    <div class="register-container">
+        <div class="image-container">
+            <img class="logo" src="../../../../assets/images/login/pokemonLogo.png" alt="Pokemon-logo">
+        </div>
+        <form class="form-wrapper" #registerForm="ngForm" (ngSubmit)="onRegister(registerForm)">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    required
+                    ngModel
+                    name="username"
+                    placeholder=" ..."
+                />
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                    ngModel
+                    name="email"
+                    placeholder=" ..."
+                />
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="country"
+                    required
+                    ngModel
+                    name="country"
+                    placeholder=" ..."
+                />
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="gender"
+                    required
+                    ngModel
+                    name="gender"
+                    placeholder=" ..."
+                />
+            </div>
+            <div class="form-group">
+                <label for="psw">Password</label>
+                <input
+                    type="password"
+                    class="form-control"
+                    id="psw"
+                    required
+                    ngModel
+                    name="password"
+                    placeholder=" ..."
+                />
+            </div>
+            <button
+                class="register-button "
+                type="submit"
+                [disabled]="!registerForm.valid">
+                Create Account
+            </button>
+        </form>
+    </div>
+</div>
+

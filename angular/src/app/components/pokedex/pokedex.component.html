@@ -1,0 +1,43 @@
+<div class="main-container">
+    <div class="pokedex-container">
+            <!-- for loop to loop through each pokemon in pokemon array -->
+            <div class="pokeDex" *ngFor="let pokemon of pokemons">
+                <!-- for loop to loop through each stat/item in pokemon -->
+                <div class="pokemonCard" *ngFor="let item of pokemon">
+                    <div class="pokemonImage">
+                        <img src="{{getBaseUrl()}}pokemon/image/{{pad(item.id, 3)}}">
+                    </div>
+                    <div class="pokemonData" style="align-self: center">
+                    </div>
+                    <ul>
+                        <li>
+                            <p>{{ item.id }} - {{ item.name }}</p>
+                            Attack:
+                            {{ item.attack }}
+                            Defense:
+                            {{ item.defense }}
+                            Health:
+                            {{ item.health }}
+                            <br>
+                            <p>Type: {{ item.type }}</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pokemonCard hide">
+                    <div class="pokemonImage">
+                        <img src="../../../assets/images/battle/pokemon1.png">
+                    </div>
+                    <div class="pokemonData" style="align-self: center">
+                    </div>
+                    <ul>
+                        <li>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+    </div>
+    <app-navigation></app-navigation>
+</div>

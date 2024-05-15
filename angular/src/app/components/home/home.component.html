@@ -1,0 +1,36 @@
+<div class="main-container">
+    <div class="home-container">
+        <img src="../../../../assets/images/login/pokemonLogo.png" alt="Pokemonlogo">
+        <div class="item-container">
+            <div routerLink="/battle-select" class="item1">
+                <h3>Battle</h3>
+                <div class="battle-img"></div>
+            </div>
+
+            <div routerLink="/party" class="item2">
+                <h3>party</h3>
+                <div class="party-img"></div>
+            </div>
+
+            <div routerLink="/pokedex" class="item3">
+                <h3>Pokedex</h3>
+                <div class="pokedex-img"></div>
+            </div>
+
+            <div routerLink="/shop" class="item4">
+                <h3>Shop</h3>
+                <div class="shop-img"></div>
+            </div>
+
+            <div routerLink="/tutorial" class="item5">
+                <h3>Rules</h3>
+                <div class="tut-img"></div>
+            </div>
+
+            <div (click)="logout()" class="item6">
+                <h3>Logout</h3>
+                <div class="logout-img"></div>
+            </div>
+        </div>
+    </div>
+</div>

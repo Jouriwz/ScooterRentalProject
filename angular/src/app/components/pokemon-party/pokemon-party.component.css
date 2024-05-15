@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(src/assets/images/home/homebg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.pokemonCard {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    max-width: 30%;
+}
+
+.storedPokemon {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+}
+
+
+.party-container>div {
+    background-color: #31445A;
+    border: 2px solid #1D2837;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.pokemonImage img {
+    grid-area: pokemonImage;
+    width: 30%;
+    height: auto;
+}
+
+.pokemonName {
+    grid-area: pokemonName;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.pokemonLevel {
+    grid-area: pokemonLevel;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.pokemonHp {
+    grid-area: pokemonHp;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.party-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 40px;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    grid-auto-flow: row;
+    grid-template-areas:
+    ". pokemon1 ."
+    ". pokemon2 ."
+    ". pokemon3 ."
+    ". pokemon4 ."
+    ". pokemon5 ."
+    ". pokemon6 ."
+    "storedPokemon storedPokemon storedPokemon"
+    "storedPokemon storedPokemon storedPokemon";
+}
+
+.pokemon1 {
+    grid-area: pokemon1;
+    max-height: 100%;
+}
+
+.pokemon2 {
+    grid-area: pokemon2;
+}
+
+.pokemon3 {
+    grid-area: pokemon3;
+}
+
+.pokemon4 {
+    grid-area: pokemon4;
+}
+
+.pokemon5 {
+    grid-area: pokemon5;
+}
+
+.pokemon6 {
+    grid-area: pokemon6;
+}
+
+.storedPokemon {
+    grid-area: storedPokemon;
+}
+
+
+@media (max-width: 992px) {
+    .home-container {
+        grid-template-areas:
+            'pokemon1  pokemon2'
+            'party  rp'
+            'chat  prev'
+            'news news';
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-container {
+        grid-template-areas:
+            'pokemon1'
+            'pokemon2'
+            'pokemon3'
+            'pokemon4'
+            'pokemon5'
+            'pokemon6'
+            'StoredPokemon';
+        padding: 30px;
+    }
+
+    .home-container>div {
+        max-height: 300px;
+    }
+
+    .menu {
+        display: none;
+    }
+}

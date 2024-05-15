@@ -1,0 +1,17 @@
+<nav class="nav-menu">
+<!--    <button (click)=toggleDisplay()>test</button>-->
+    <img class="menu-button" src="../../../../assets/images/util/parrow.png" alt="" (click)=toggleDisplay()>
+    <div class="menu" *ngIf="!isShow">
+        <img src="../../../../assets/images/login/pokemonLogo.png" alt="">
+        <ul>
+            <li><a routerLink="/home">Home</a></li>
+            <li><a routerLink="/battle-select">Battle</a></li>
+            <li><a routerLink="/shop">Shop</a></li>
+            <li><a routerLink="/pokedex">Pokedex</a></li>
+            <li><a routerLink="/party">Party</a></li>
+            <li><a routerLink="/tutorial">Tutorial</a></li>
+            <li><a routerLink="/reset-password">Reset Password</a></li>
+            <li><a (click)="logout()">Logout</a></li>
+        </ul>
+    </div>
+</nav>

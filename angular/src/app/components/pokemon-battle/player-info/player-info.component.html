@@ -1,0 +1,12 @@
+<div class="player-info">
+    <h1>{{data.active_pokemon.pokemon.name}}</h1>
+    <p>Lv20</p>
+    <div class="healthbar">
+        <div class="bar">
+            <h2>HP</h2>
+<!--            <div id="test" class="health" value="100" max="100"></div>-->
+            <progress class="health" id="test" value="{{data.active_pokemon.health}}" max="{{data.active_pokemon.pokemon.health}}"></progress>
+        </div>
+    </div>
+    <p>{{data.active_pokemon.health}}/{{data.active_pokemon.pokemon.health}}</p>
+</div>
